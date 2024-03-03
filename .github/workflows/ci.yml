@@ -1,0 +1,17 @@
+name: CI
+
+on: push
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+    runs-on: ${{matrix.os}}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: goto-bus-stop/setup-zig@v2
+      - run: |
+          export CC="zig cc"
+          pip install nuitka
+          
