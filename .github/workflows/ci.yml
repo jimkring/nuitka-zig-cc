@@ -19,4 +19,8 @@ jobs:
           export CC="zig cc"
           pip install -r requirements.txt
           python -m nuitka hello.py
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() }}
+        with:
+          path: nuitka-crash-report.xml
           
