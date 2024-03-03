@@ -18,7 +18,6 @@ jobs:
       - run: |
           export CC="zig cc"
           export CXX="zig c++"
-          zig cc
           pip install -r requirements.txt
           python -m nuitka hello.py
       - uses: actions/upload-artifact@v4
