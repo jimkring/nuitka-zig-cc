@@ -17,6 +17,7 @@ jobs:
       - uses: goto-bus-stop/setup-zig@v2
       - run: |
           export CC="zig cc"
+          export CXX="zig c++"
           zig cc
           pip install -r requirements.txt
           python -m nuitka hello.py
