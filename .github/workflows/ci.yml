@@ -16,8 +16,8 @@ jobs:
           cache: 'pip' # caching pip dependencies
       - uses: goto-bus-stop/setup-zig@v2
       - run: |
-          export CC="zig cc"
-          export CXX="zig c++"
+          chmod ugo+x zig-cc.sh
+          export CC="$(pwd)/zig-cc.sh"
           pip install -r requirements.txt
           python -m nuitka --show-scons hello.py
       - uses: actions/upload-artifact@v4
