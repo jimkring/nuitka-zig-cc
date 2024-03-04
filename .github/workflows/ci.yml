@@ -21,7 +21,7 @@ jobs:
           export CXX="$(pwd)/zig-clang++.sh"
           export CC="$(pwd)/clang-cc.sh"
           pip install -r requirements.txt
-          python -m nuitka --show-scons --lto=no hello.py
+          python -m nuitka --show-scons --lto=no --clang hello.py
       - uses: actions/upload-artifact@v4
         if: ${{ always() }}
         with:
