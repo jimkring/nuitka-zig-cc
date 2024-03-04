@@ -17,8 +17,9 @@ jobs:
       - uses: goto-bus-stop/setup-zig@v2
       - run: |
           chmod ugo+x *.sh
+          mv zig-cc.sh zig-clang.sh
           export CXX="$(pwd)/zig-clang++.sh"
-          export CC="$(pwd)/zig-cc.sh"
+          export CC="$(pwd)/zig-clang.sh"
           pip install -r requirements.txt
           python -m nuitka --show-scons hello.py
       - uses: actions/upload-artifact@v4
