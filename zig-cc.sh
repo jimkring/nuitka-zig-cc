@@ -1,3 +1,3 @@
 #!/bin/bash
 
-zig cc "$@"
+zig c++ "$@"
