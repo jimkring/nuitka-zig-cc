@@ -16,7 +16,7 @@ jobs:
           cache: 'pip' # caching pip dependencies
       - uses: goto-bus-stop/setup-zig@v2
         with:
-          version: 0.11.0
+          version: master
       - run: |
           chmod ugo+x *.sh
           mv zig-cc.sh clang-cc.sh
