@@ -33,7 +33,7 @@ jobs:
           export CXX="$(pwd)/zig-clang++.sh"
           export CC="$(pwd)/zig-clang-cc.sh"
           pip install -r requirements.txt
-          python -m nuitka --show-scons --clang --standalone hello.py
+          python -m nuitka --show-scons --clang hello.py
           ./hello.dist/hello.bin
       - uses: actions/upload-artifact@v4
         if: ${{ always() }}
