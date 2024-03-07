@@ -2,6 +2,7 @@
 
 if [[ -z "$TARGET" ]]; then
   zig cc "$@"
-else do
+else
   zig cc -target $TARGET "$@"
 fi
+
