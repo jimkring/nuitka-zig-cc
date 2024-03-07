@@ -1,3 +1,3 @@
 #!/bin/bash
 
-zig cc "$@ -target $TARGET"
+zig cc -target $TARGET "$@"
