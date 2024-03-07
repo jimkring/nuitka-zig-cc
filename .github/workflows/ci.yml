@@ -20,7 +20,9 @@ jobs:
         with:
           version: master
           cache: false
-      - run: |
+      - 
+        name: Build with Nuikta and Zig
+        run: |
           chmod ugo+x *.sh
           export CXX="$(pwd)/zig-clang++.sh"
           export CC="$(pwd)/zig-clang-cc.sh"
