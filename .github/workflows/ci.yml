@@ -44,9 +44,14 @@ jobs:
           chmod ugo+x *.sh
           # export TARGET=${{ matrix.target }}
 
+          if [[ -n "$WINDIR" ]]; then
+            SCRIPT_EXT="sh"
+          else
+            SCRIPT_EXT="bat"
+          fi
           if [[ "${{ matrix.compiler }}" == 'zig' ]]; then
-            export CC="$(pwd)/zig-clang-cc.bat"
-            export CXX="$(pwd)/zig-clang++.sh"
+            export CC="$(pwd)/zig-clang-cc.$SCRIPT_EXT"
+            export CXX="$(pwd)/zig-clang++.$SCRIPT_EXT"
           fi
 
           pip install -r requirements.txt
