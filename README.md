@@ -10,7 +10,7 @@ There is an official Nuitka issue for tracking this (https://github.com/Nuitka/N
 
 The current approach that this test project takes is:
 
-- Use a shell script named `zig-clang-cc.sh` that calls `zig cc` and passes it all command line arguments the script basically just looks like this -> `zig cc "$@"`.  This "fools" Nuitka into thinking that zig cc is clang.
+- Use a shell script named `zig-clang-cc.sh` that calls `zig cc` and passes it all command line arguments. The script is simple and badically just does this -> `zig cc "$@"`.  This "fools" Nuitka into thinking that zig cc is clang.
 - Also, be sure to pass the `--clang` option to the zig command.
 - You can use Nuitka's `--standalone` option
 
