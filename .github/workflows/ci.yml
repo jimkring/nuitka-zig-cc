@@ -57,7 +57,7 @@ jobs:
             --assume-yes-for-downloads \
             --standalone \
             hello.py
-          ./hello.dist/hello.bin
+          ./hello.dist/hello.*
       - uses: actions/upload-artifact@v4
         if: ${{ always() }}
         with:
