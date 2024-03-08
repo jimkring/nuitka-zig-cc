@@ -9,9 +9,17 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python_version: ['3.9', '3.10', '3.11']
-        os: [ubuntu-latest]
-        compiler: [zig, gcc]
+        python_version:
+          # - '3.9'
+          - '3.10'
+          # - '3.11'
+        os:
+          # - ubuntu-latest
+          - windows-latest
+          - macos-latest
+        compiler:
+          - zig
+          - gcc
         # target:
         #   - x86_64-linux
           # - x86_64-macos
