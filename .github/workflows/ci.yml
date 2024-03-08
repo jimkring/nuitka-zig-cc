@@ -37,7 +37,7 @@ jobs:
           python -m nuitka \
             --show-scons \
             --clang \
-            ----onefile \
+            --onefile \
             hello.py
           ./hello.bin
       - uses: actions/upload-artifact@v4
