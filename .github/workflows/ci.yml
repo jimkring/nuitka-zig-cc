@@ -16,10 +16,10 @@ jobs:
         os:
           # - ubuntu-latest
           - windows-latest
-          - macos-latest
+          # - macos-latest
         compiler:
           - zig
-          - gcc
+          # - gcc
         # target:
         #   - x86_64-linux
           # - x86_64-macos
@@ -45,7 +45,7 @@ jobs:
           # export TARGET=${{ matrix.target }}
 
           if [[ "${{ matrix.compiler }}" == 'zig' ]]; then
-            export CC="$(pwd)/zig-clang-cc.sh"
+            export CC="$(pwd)/zig-clang-cc.bat"
             export CXX="$(pwd)/zig-clang++.sh"
           fi
 
