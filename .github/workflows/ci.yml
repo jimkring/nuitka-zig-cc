@@ -45,9 +45,9 @@ jobs:
           # export TARGET=${{ matrix.target }}
 
           if [[ -n "$WINDIR" ]]; then
-            SCRIPT_EXT="sh"
-          else
             SCRIPT_EXT="bat"
+          else
+            SCRIPT_EXT="sh"
           fi
           if [[ "${{ matrix.compiler }}" == 'zig' ]]; then
             export CC="$(pwd)/zig-clang-cc.$SCRIPT_EXT"
