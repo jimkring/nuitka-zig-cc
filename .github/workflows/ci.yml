@@ -39,6 +39,7 @@ jobs:
           cache: false
       - 
         name: Build with Nuikta and Zig
+        shell: bash
         run: |
           chmod ugo+x *.sh
           # export TARGET=${{ matrix.target }}
