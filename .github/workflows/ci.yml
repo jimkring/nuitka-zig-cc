@@ -14,12 +14,12 @@ jobs:
           - '3.10'
           # - '3.11'
         os:
-          # - ubuntu-latest
+          - ubuntu-latest
           - windows-latest
           # - macos-latest
         compiler:
           - zig
-          # - gcc
+          - gcc
         # target:
         #   - x86_64-linux
           # - x86_64-macos
