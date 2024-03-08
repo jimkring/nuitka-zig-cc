@@ -42,7 +42,7 @@ jobs:
             --static-libpython=yes \
             --standalone \
             hello.py
-          ./hello.bin
+          ./hello.dist/hello.bin
       - uses: actions/upload-artifact@v4
         if: ${{ always() }}
         with:
