@@ -54,6 +54,7 @@ jobs:
             --show-scons \
             --clang \
             --static-libpython=no \
+            --assume-yes-for-downloads \
             --standalone \
             hello.py
           ./hello.dist/hello.bin
