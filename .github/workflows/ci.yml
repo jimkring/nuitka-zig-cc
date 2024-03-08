@@ -51,7 +51,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: ${{ always() }}
         with:
-          name: standalone-${{matrix.os}}-python-${{matrix.python_version}}
+          name: standalone-${{matrix.os}}-python-${{matrix.python_version}}-${{matrix.compiler}}
           path: |
             nuitka-crash-report.xml
             hello.dist/**/*
