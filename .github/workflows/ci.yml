@@ -11,6 +11,7 @@ jobs:
       matrix:
         python_version: ['3.9', '3.10', '3.11']
         os: [ubuntu-latest]
+        compiler: [zig, gcc]
         # target:
         #   - x86_64-linux
           # - x86_64-macos
@@ -33,8 +34,12 @@ jobs:
         run: |
           chmod ugo+x *.sh
           # export TARGET=${{ matrix.target }}
-          export CXX="$(pwd)/zig-clang++.sh"
-          export CC="$(pwd)/zig-clang-cc.sh"
+
+          if [[ "${{ matrix.compiler }}" == 'zig' ]]; then
+            export CC="$(pwd)/zig-clang-cc.sh"
+            export CXX="$(pwd)/zig-clang++.sh"
+          fi
+
           pip install -r requirements.txt
           python -m nuitka \
             --show-scons \
