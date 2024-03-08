@@ -53,7 +53,7 @@ jobs:
           python -m nuitka \
             --show-scons \
             --clang \
-            --static-libpython=yes \
+            --static-libpython=no \
             --standalone \
             hello.py
           ./hello.dist/hello.bin
