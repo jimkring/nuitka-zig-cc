@@ -38,12 +38,13 @@ jobs:
           python -m nuitka \
             --show-scons \
             --clang \
-            --onefile \
+            --standalone \
             hello.py
           ./hello.bin
       - uses: actions/upload-artifact@v4
         if: ${{ always() }}
         with:
+          name: standalone-${{matrix.os}}-python-${{matrix.python_version}}
           path: |
             nuitka-crash-report.xml
             hello.dist/**/*
