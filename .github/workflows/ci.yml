@@ -53,7 +53,7 @@ jobs:
             export CC="$(pwd)/zig-clang-cc.$SCRIPT_EXT"
             export CXX="$(pwd)/zig-clang++.$SCRIPT_EXT"
           fi
-
+          pip install git+https://github.com/Nuitka/Nuitka.git@factory
           pip install -r requirements.txt
           python -m nuitka \
             --show-scons \
