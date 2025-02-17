@@ -1,10 +1,10 @@
 # nuitka-zig-cc
 
-> Status Update: It appears to be working OK in the latest nightly build of zig!
+> Status Update: It appears to be working OK for Python 3.10 and older in the latest nightly build of zig!
 
 This is a small test project to see how to use zig as a backend C compiler with Nuitka.
 
-There is an official Nuitka issue for tracking this (https://github.com/Nuitka/Nuitka/issues/2741) which also references some Zig issues impacting Nuitka's use of zig as a backend C compiler.
+There is an official Nuitka issue for tracking this (https://github.com/Nuitka/Nuitka/issues/2741) which also references some [Zig issues](https://github.com/Nuitka/Nuitka/issues/2742) impacting Nuitka's use of zig as a backend C compiler.
 
 # How it works
 
