@@ -22,7 +22,7 @@ jobs:
           - zig
           - gcc
         zig_version:
-          # - '0.13.0'
+          - '0.13.0'
           - '0.14.0-dev.3239+d7b93c787'
         nuitka_version:
          # - 'factory'
