@@ -12,8 +12,8 @@ jobs:
         python_version:
           # - '3.9'
           # - '3.10'
-          # - '3.11'
-          - '3.12'
+          - '3.11'
+          # - '3.12'
         os:
           - ubuntu-latest
           - windows-latest
@@ -22,7 +22,8 @@ jobs:
           - zig
           - gcc
         zig_version:
-          - '0.13.0'
+          # - '0.13.0'
+          - 'zig-0.14.0-dev.3239+d7b93c787'
         nuitka_version:
          # - 'factory'
           - '2.6.6'
