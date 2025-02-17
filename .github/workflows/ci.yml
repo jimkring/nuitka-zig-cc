@@ -21,6 +21,11 @@ jobs:
         compiler:
           - zig
           - gcc
+        zig_version:
+          - '0.13.0'
+        nuitka_version:
+         # - 'factory'
+          - '2.6.6'
         # target:
         #   - x86_64-linux
           # - x86_64-macos
@@ -36,7 +41,7 @@ jobs:
       - uses: goto-bus-stop/setup-zig@v2
         with:
           # version: master
-          version: 0.13.0
+          version: ${{matrix.zig_version}}
           cache: false
       - 
         name: Build with Nuikta and Zig
@@ -54,7 +59,7 @@ jobs:
             export CC="$(pwd)/zig-clang-cc.$SCRIPT_EXT"
             export CXX="$(pwd)/zig-clang++.$SCRIPT_EXT"
           fi
-          pip install git+https://github.com/Nuitka/Nuitka.git@factory
+          pip install git+https://github.com/Nuitka/Nuitka.git@${{matrix.nuitka_version}}
           pip install -r requirements.txt
           python -m nuitka \
             --show-scons \
